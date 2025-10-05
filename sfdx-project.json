@@ -7,13 +7,21 @@
       "default": true,
       "package": "Caliber Core",
       "versionDescription": "Shared contracts, utilities, and registry for Caliber modules"
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": false,
+      "package": "Caliber Core (Unlocked)",
+      "versionDescription": ""
     }
   ],
   "name": "caliber-core",
-  "namespace": "caliber",
+  "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "64.0",
   "packageAliases": {
-    "Caliber Core (Managed)": "0Hoaj0000000rFdCAI"
+    "Caliber Core (Unlocked)": "0Hoaj0000000rHFCAY"
   }
 }
