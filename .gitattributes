@@ -1,0 +1,12 @@
+# normalize text files
+* text=auto eol=lf
+
+# keep these as text
+*.cls text
+*.trigger text
+*.xml text
+*.json text
+*.js text
+*.html text
+*.css text
+*.md text
