@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+  <label>Caliber Core Admin</label>
+  <hasActivationRequired>false</hasActivationRequired>
+
+  <classAccesses><apexClass>IIntegrationHook</apexClass><enabled>true</enabled></classAccesses>
+  <classAccesses><apexClass>IntegrationRegistry</apexClass><enabled>true</enabled></classAccesses>
+  <classAccesses><apexClass>ErrorLogService</apexClass><enabled>true</enabled></classAccesses>
+  <classAccesses><apexClass>ErrorLogInvocable</apexClass><enabled>true</enabled></classAccesses>
+
+  <customMetadataTypeAccesses><name>Integration_Hook__mdt</name><enabled>true</enabled></customMetadataTypeAccesses>
+
+  <objectPermissions>
+    <object>Error_Log__c</object>
+    <allowCreate>true</allowCreate><allowRead>true</allowRead>
+    <allowEdit>false</allowEdit><allowDelete>false</allowDelete>
+    <modifyAllRecords>false</modifyAllRecords><viewAllRecords>true</viewAllRecords>
+  </objectPermissions>
+
+  <fieldPermissions><field>Error_Log__c.Component__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Context__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Message__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Severity__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Correlation_Id__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Exception_Type__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Source__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Stacktrace__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Operation__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+  <fieldPermissions><field>Error_Log__c.Payload__c</field><editable>true</editable><readable>true</readable></fieldPermissions>
+</PermissionSet>

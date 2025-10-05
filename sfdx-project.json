@@ -1,12 +1,19 @@
 {
   "packageDirectories": [
     {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
-      "default": true
+      "default": true,
+      "package": "Caliber Core",
+      "versionDescription": "Shared contracts, utilities, and registry for Caliber modules"
     }
   ],
   "name": "caliber-core",
-  "namespace": "",
+  "namespace": "caliber",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "64.0"
+  "sourceApiVersion": "64.0",
+  "packageAliases": {
+    "Caliber Core (Managed)": "0Hoaj0000000rFdCAI"
+  }
 }
