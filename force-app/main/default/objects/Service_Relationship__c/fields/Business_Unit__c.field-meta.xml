@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Business_Unit__c</fullName>
+  <label>Business Unit</label>
+  <type>Lookup</type>
+  <referenceTo>Business_Unit__c</referenceTo>
+  <relationshipLabel>Service Relationships</relationshipLabel>
+  <relationshipName>Service_Relationships</relationshipName>
+  <deleteConstraint>SetNull</deleteConstraint>
+  <required>false</required>
+</CustomField>

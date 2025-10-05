@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Type__c</fullName>
+  <label>Type</label>
+  <type>Picklist</type>
+  <valueSet>
+    <valueSetDefinition>
+      <sorted>true</sorted>
+      <value><fullName>Website</fullName><label>Website</label></value>
+      <value><fullName>ShortLink</fullName><label>Short Link</label></value>
+      <value><fullName>QR</fullName><label>QR</label></value>
+      <value><fullName>Image</fullName><label>Image</label></value>
+      <value><fullName>Badge</fullName><label>Badge</label></value>
+      <value><fullName>Webhook</fullName><label>Webhook</label></value>
+      <value><fullName>Other</fullName><label>Other</label></value>
+    </valueSetDefinition>
+  </valueSet>
+</CustomField>
