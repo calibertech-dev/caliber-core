@@ -4,5 +4,8 @@ A Salesforce App that adds basic utilities, error logging and acts as a library 
 
 ## Do you need CALIBER CORE?
 
-CALIBER CORE provides several useful tools such as Multi-Buisiness functionality, Customer Review requests & tracking, error logging for Flows & Apex, etc. 
+CALIBER CORE provides several useful tools and features such as Multi-Buisiness functionality, Customer Review requests & tracking, error logging for Flows & Apex, etc. 
 
+## Features:
+- Account Number Generator (8 Digits - Random + Unique) | Default OFF
+- 
