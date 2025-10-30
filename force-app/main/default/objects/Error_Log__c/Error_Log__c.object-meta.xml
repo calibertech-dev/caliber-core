@@ -3,7 +3,7 @@
   <label>Error Log</label>
   <pluralLabel>Error Logs</pluralLabel>
   <nameField>
-    <displayFormat>E-{YYYYMMDD}-{00000}</displayFormat>
+    <displayFormat>E-{YYMMDD}-{00000}</displayFormat>
     <label>Error Log</label>
     <type>AutoNumber</type>
   </nameField>

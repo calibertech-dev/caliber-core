@@ -13,7 +13,7 @@
       "versionNumber": "0.1.0.NEXT",
       "path": "force-app",
       "default": false,
-      "package": "Caliber Core (Unlocked)",
+      "package": "Caliber Core",
       "versionDescription": ""
     }
   ],
@@ -22,6 +22,7 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "64.0",
   "packageAliases": {
-    "Caliber Core (Unlocked)": "0Hoaj0000000rHFCAY"
+    "Caliber Core": "0Hoaj0000000rHFCAY",
+    "Caliber Core@0.1.0-1": "04taj000000CWXBAA4"
   }
 }
