@@ -5,7 +5,7 @@
   <type>Lookup</type>
   <referenceTo>Business_Unit__c</referenceTo>
   <relationshipLabel>Service Relationships</relationshipLabel>
-  <relationshipName>Service_Relationships</relationshipName>
+  <relationshipName>Business_Unit_Service_Relationships</relationshipName>
   <deleteConstraint>SetNull</deleteConstraint>
   <required>false</required>
 </CustomField>
