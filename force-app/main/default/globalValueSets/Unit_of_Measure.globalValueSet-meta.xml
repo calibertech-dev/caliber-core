@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Standard unit of measure values</description>
+    <masterLabel>Unit of Measure</masterLabel>
+    <sorted>true</sorted>
+
+    <!-- Count / Packaging -->
+    <customValue><fullName>each</fullName><default>true</default><label>each</label></customValue>
+    <customValue><fullName>bag</fullName><default>false</default><label>bag</label></customValue>
+    <customValue><fullName>box</fullName><default>false</default><label>box</label></customValue>
+    <customValue><fullName>bottle</fullName><default>false</default><label>bottle</label></customValue>
+    <customValue><fullName>bundle</fullName><default>false</default><label>bundle</label></customValue>
+    <customValue><fullName>can</fullName><default>false</default><label>can</label></customValue>
+    <customValue><fullName>cartridge</fullName><default>false</default><label>cartridge</label></customValue>
+    <customValue><fullName>case</fullName><default>false</default><label>case</label></customValue>
+    <customValue><fullName>drum</fullName><default>false</default><label>drum</label></customValue>
+    <customValue><fullName>kit</fullName><default>false</default><label>kit</label></customValue>
+    <customValue><fullName>load</fullName><default>false</default><label>load</label></customValue>
+    <customValue><fullName>pair</fullName><default>false</default><label>pair</label></customValue>
+    <customValue><fullName>pallet</fullName><default>false</default><label>pallet</label></customValue>
+    <customValue><fullName>panel</fullName><default>false</default><label>panel</label></customValue>
+    <customValue><fullName>pail</fullName><default>false</default><label>pail</label></customValue>
+    <customValue><fullName>roll</fullName><default>false</default><label>roll</label></customValue>
+    <customValue><fullName>set</fullName><default>false</default><label>set</label></customValue>
+    <customValue><fullName>sheet</fullName><default>false</default><label>sheet</label></customValue>
+    <customValue><fullName>tube</fullName><default>false</default><label>tube</label></customValue>
+
+    <!-- Service Occurrence -->
+    <customValue><fullName>trip</fullName><default>false</default><label>trip</label></customValue>
+
+    <!-- Linear -->
+    <customValue><fullName>in</fullName><default>false</default><label>in</label></customValue>
+    <customValue><fullName>ft</fullName><default>false</default><label>ft</label></customValue>
+    <customValue><fullName>yd</fullName><default>false</default><label>yd</label></customValue>
+    <customValue><fullName>cm</fullName><default>false</default><label>cm</label></customValue>
+    <customValue><fullName>mm</fullName><default>false</default><label>mm</label></customValue>
+    <customValue><fullName>m</fullName><default>false</default><label>m</label></customValue>
+    <customValue><fullName>ln ft</fullName><default>false</default><label>ln ft</label></customValue>
+
+    <!-- Area -->
+    <customValue><fullName>sq in</fullName><default>false</default><label>sq in</label></customValue>
+    <customValue><fullName>sq ft</fullName><default>false</default><label>sq ft</label></customValue>
+    <customValue><fullName>sq yd</fullName><default>false</default><label>sq yd</label></customValue>
+    <customValue><fullName>sq m</fullName><default>false</default><label>sq m</label></customValue>
+    <customValue><fullName>square</fullName><default>false</default><label>square (100 sq ft)</label></customValue>
+
+    <!-- Volume -->
+    <customValue><fullName>cu in</fullName><default>false</default><label>cu in</label></customValue>
+    <customValue><fullName>cu ft</fullName><default>false</default><label>cu ft</label></customValue>
+    <customValue><fullName>cu yd</fullName><default>false</default><label>cu yd</label></customValue>
+    <customValue><fullName>cu m</fullName><default>false</default><label>cu m</label></customValue>
+
+    <!-- Fluids (Volumetric) -->
+    <customValue><fullName>fl oz</fullName><default>false</default><label>fl oz</label></customValue>
+    <customValue><fullName>gal</fullName><default>false</default><label>gal</label></customValue>
+    <customValue><fullName>L</fullName><default>false</default><label>L</label></customValue>
+    <customValue><fullName>mL</fullName><default>false</default><label>mL</label></customValue>
+
+    <!-- Mass / Weight -->
+    <customValue><fullName>oz</fullName><default>false</default><label>oz</label></customValue>
+    <customValue><fullName>lb</fullName><default>false</default><label>lb</label></customValue>
+    <customValue><fullName>g</fullName><default>false</default><label>g</label></customValue>
+    <customValue><fullName>kg</fullName><default>false</default><label>kg</label></customValue>
+    <customValue><fullName>ton</fullName><default>false</default><label>ton (US)</label></customValue>
+    <customValue><fullName>tonne</fullName><default>false</default><label>tonne (metric)</label></customValue>
+
+    <!-- Time -->
+    <customValue><fullName>second</fullName><default>false</default><label>second</label></customValue>
+    <customValue><fullName>minute</fullName><default>false</default><label>minute</label></customValue>
+    <customValue><fullName>hour</fullName><default>false</default><label>hour</label></customValue>
+    <customValue><fullName>day</fullName><default>false</default><label>day</label></customValue>
+    <customValue><fullName>week</fullName><default>false</default><label>week</label></customValue>
+    <customValue><fullName>month</fullName><default>false</default><label>month</label></customValue>
+    <customValue><fullName>year</fullName><default>false</default><label>year</label></customValue>
+
+    <!-- Lumber / Board Measure -->
+    <customValue><fullName>bd ft</fullName><default>false</default><label>bd ft</label></customValue>
+</GlobalValueSet>
