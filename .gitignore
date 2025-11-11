@@ -48,5 +48,6 @@ $RECYCLE.BIN/
 **/venv/
 
 # Local Files
+.sfdx-hardis/
 /deploy/
-
+/hardis-report/
