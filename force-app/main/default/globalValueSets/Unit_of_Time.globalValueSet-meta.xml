@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Standard units of time from milliseconds to millennia.</description>
+    <masterLabel>Units of Time</masterLabel>
+    <sorted>true</sorted>
+
+    <customValue><fullName>millisecond</fullName><default>false</default><label>millisecond</label></customValue>
+    <customValue><fullName>second</fullName><default>false</default><label>second</label></customValue>
+    <customValue><fullName>minute</fullName><default>false</default><label>minute</label></customValue>
+    <customValue><fullName>hour</fullName><default>false</default><label>hour</label></customValue>
+    <customValue><fullName>day</fullName><default>false</default><label>day</label></customValue>
+    <customValue><fullName>week</fullName><default>false</default><label>week</label></customValue>
+    <customValue><fullName>month</fullName><default>false</default><label>month</label></customValue>
+    <customValue><fullName>quarter</fullName><default>false</default><label>quarter</label></customValue>
+    <customValue><fullName>year</fullName><default>false</default><label>year</label></customValue>
+    <customValue><fullName>decade</fullName><default>false</default><label>decade</label></customValue>
+    <customValue><fullName>century</fullName><default>false</default><label>century</label></customValue>
+    <customValue><fullName>millennium</fullName><default>false</default><label>millennium</label></customValue>
+</GlobalValueSet>

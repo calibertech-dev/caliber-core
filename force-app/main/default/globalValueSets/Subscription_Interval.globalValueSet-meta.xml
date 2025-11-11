@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Subscription interval values from weekly to annually.</description>
+    <masterLabel>Subscription Interval</masterLabel>
+    <sorted>true</sorted>
+
+    <customValue><fullName>Weekly</fullName><default>false</default><label>Weekly</label></customValue>
+    <customValue><fullName>Biweekly</fullName><default>false</default><label>Biweekly</label></customValue>
+    <customValue><fullName>Monthly</fullName><default>false</default><label>Monthly</label></customValue>
+    <customValue><fullName>Quarterly</fullName><default>false</default><label>Quarterly</label></customValue>
+    <customValue><fullName>Biannually</fullName><default>false</default><label>Biannually</label></customValue>
+    <customValue><fullName>Annually</fullName><default>false</default><label>Annually</label></customValue>
+</GlobalValueSet>
