@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title={title} icon-name="standard:bundle_config">
+        <template if:true={deploymentStatus}>
+            <div slot="actions" class="slds-text-align_right">
+                Deployment Status: {deploymentStatus} <br />
+                {deploymentMessage}
+            </div>
+        </template>
+
+        <div class="slds-p-horizontal_small slds-p-bottom_x-small">
+            <lightning-button
+                variant="destructive"
+                label="Delete Selected"
+                title="Delete Selected"
+                onclick={handleBulkDelete}
+                disabled={disableBulkDelete}
+                class="slds-m-right_x-small"
+            ></lightning-button>
+        </div>
+
+        <lightning-datatable
+            key-field="DeveloperName"
+            data={records}
+            columns={columns}
+            onsave={handleSave}
+            onsort={handleSort}
+            sorted-by={sortedBy}
+            sorted-direction={sortedDirection}
+            default-sort-direction={defaultSortDirection}
+            show-row-number-column
+            onrowaction={handleRowAction}
+            onselectionchange={handleSelectionChange}
+        >
+        </lightning-datatable>
+    </lightning-card>
+
+    <template if:true={isDeploying}>
+        <lightning-spinner
+            title="Deploying..."
+            alternative-text="Please wait while CMDT records are deployed"
+        ></lightning-spinner>
+    </template>
+</template>

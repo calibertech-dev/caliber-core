@@ -1,8 +1,10 @@
 {
-  "name": "salesforce-app",
+  "name": "caliber-core",
   "private": true,
   "version": "1.0.0",
   "description": "Salesforce App",
+  "author": "Caliber Technologies, LLC",
+  "license": "Source-Available License: No Modification or Resale",
   "scripts": {
     "lint": "eslint **/{aura,lwc}/**/*.js",
     "test": "npm run test:unit",
