@@ -82,4 +82,78 @@ private class CustomMetadataTableControllerTest {
             return httpResponse;
         }
     }
+
+    // ─────────────────────────────────────────────
+    // 1) getSObjectApiName: exercise the catch path
+    // ─────────────────────────────────────────────
+    @IsTest
+    static void it_should_log_and_rethrow_when_getSObjectApiName_fails() {
+        Boolean threw = false;
+
+        Test.startTest();
+        try {
+            // Passing null will cause a NullPointerException inside the try block
+            CustomMetadataTableController.getSObjectApiName(null);
+            System.assert(false, 'Expected exception was not thrown');
+        } catch (Exception ex) {
+            threw = true;
+            System.assertNotEquals(null, ex, 'Exception should be rethrown from getSObjectApiName');
+        }
+        Test.stopTest();
+
+        System.assertEquals(true, threw, 'getSObjectApiName should rethrow after logging');
+    }
+
+    // ─────────────────────────────────────────────
+    // 2) deploy(List<SObject>): exercise its catch
+    // ─────────────────────────────────────────────
+    @IsTest
+    static void it_should_log_and_rethrow_when_deploy_fails() {
+        Boolean threw = false;
+
+        Test.startTest();
+        try {
+            // Null list causes CustomMetadataSaver.deploy(List<SObject>) to blow up
+            // in its for-each loop, inside the controller's try block.
+            CustomMetadataTableController.deploy((List<SObject>)null);
+            System.assert(false, 'Expected exception was not thrown');
+        } catch (Exception ex) {
+            threw = true;
+            System.assertNotEquals(null, ex, 'Exception should be rethrown from deploy');
+        }
+        Test.stopTest();
+
+        System.assertEquals(true, threw, 'deploy should rethrow after logging');
+    }
+
+    // ─────────────────────────────────────────────
+    // 3) getDeploymentStatus: exercise its catch
+    //    by having the mock throw from respond().
+    // ─────────────────────────────────────────────
+    private class ThrowingDeploymentCalloutMock implements HttpCalloutMock {
+        public HttpResponse respond(HttpRequest req) {
+            // Simulate ugly HTTP-level failure
+            throw new CalloutException('Boom from mock');
+        }
+    }
+
+    @IsTest
+    static void it_should_log_and_rethrow_when_getDeploymentStatus_callout_fails() {
+        Boolean threw = false;
+
+        Test.setMock(HttpCalloutMock.class, new ThrowingDeploymentCalloutMock());
+
+        Test.startTest();
+        try {
+            CustomMetadataTableController.getDeploymentStatus('someJobId');
+            System.assert(false, 'Expected exception was not thrown');
+        } catch (Exception ex) {
+            threw = true;
+            System.assertNotEquals(null, ex, 'Exception should be rethrown from getDeploymentStatus');
+        }
+        Test.stopTest();
+
+        System.assertEquals(true, threw, 'getDeploymentStatus should rethrow after logging');
+    }
 }
+
