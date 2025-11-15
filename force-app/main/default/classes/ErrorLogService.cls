@@ -10,10 +10,22 @@ global with sharing class ErrorLogService {
         Exception ex,
         String payloadJson
     ) {
-        return log(context, message, severity, correlationId, ex, payloadJson, null, null, null);
+        return log(
+            context,
+            message,
+            severity,
+            correlationId,
+            ex,
+            payloadJson,
+            null,   // source
+            null,   // component
+            null,   // operation
+            null,   // parentRecordId
+            null    // parentRecordType
+        );
     }
 
-    // New overload: adds Source/Component/Operation
+    // Existing 9-arg overload (still valid) – now delegates to the full method
     global static Id log(
         String context,
         String message,
@@ -24,6 +36,35 @@ global with sharing class ErrorLogService {
         String source,
         String component,
         String operation
+    ) {
+        return log(
+            context,
+            message,
+            severity,
+            correlationId,
+            ex,
+            payloadJson,
+            source,
+            component,
+            operation,
+            null,   // parentRecordId
+            null    // parentRecordType
+        );
+    }
+
+    // New full overload: includes polymorphic parent record
+    global static Id log(
+        String context,
+        String message,
+        String severity,
+        String correlationId,
+        Exception ex,
+        String payloadJson,
+        String source,
+        String component,
+        String operation,
+        Id parentRecordId,
+        String parentRecordType
     ) {
         if (!Schema.sObjectType.Error_Log__c.isCreateable()) return null;
 
@@ -39,14 +80,47 @@ global with sharing class ErrorLogService {
         rec.Component__c      = fit(component,      Error_Log__c.Component__c);
         rec.Operation__c      = fit(operation,      Error_Log__c.Operation__c);
 
+        // Polymorphic parent record link
+        if (parentRecordId != null) {
+            String effectiveType = parentRecordType;
+
+            // If no explicit type, try to infer it from the Id itself
+            if (String.isBlank(effectiveType)) {
+                try {
+                    Schema.SObjectType sType = parentRecordId.getSObjectType();
+                    if (sType != null) {
+                        effectiveType = sType.getDescribe().getName();
+                    }
+                } catch (Exception typeEx) {
+                    // If we can't infer it, we just don't set type/name
+                }
+            }
+
+            if (!String.isBlank(effectiveType)) {
+                rec.Parent_Record_Id__c   = String.valueOf(parentRecordId);
+                rec.Parent_Record_Type__c = effectiveType;
+
+                // Try to grab the Name via the polymorphic util; never block logging if it fails
+                try {
+                    String name = PolymorphicRecordNameUtil.getRecordName(parentRecordId, effectiveType);
+                    rec.Parent_Record_Name__c = fit(name, Error_Log__c.Parent_Record_Name__c);
+                } catch (Exception nameEx) {
+                    // Swallow – worst case is we just don't populate the name
+                }
+            }
+        }
+
         insert rec;
         return rec.Id;
     }
 
     private static String normalizeSeverity(String s) {
         String v = (s == null) ? 'ERROR' : s.trim().toUpperCase();
-        return (new Set<String>{'DEBUG','INFO','WARN','ERROR','FATAL'}).contains(v) ? v : 'ERROR';
+        return (new Set<String>{ 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL' }).contains(v)
+            ? v
+            : 'ERROR';
     }
+
     private static String fit(String s, SObjectField f) {
         if (s == null) return null;
         Integer n = f.getDescribe().getLength();
