@@ -4,4 +4,5 @@
   <label>Exception Type</label>
   <type>Text</type>
   <length>255</length>
+  <description>Type of exception thrown. e.g. System.CalloutException, NullPointerException, DmlException</description>
 </CustomField>

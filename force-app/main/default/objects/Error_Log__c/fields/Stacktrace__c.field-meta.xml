@@ -5,4 +5,5 @@
   <type>LongTextArea</type>
   <length>131072</length>
   <visibleLines>10</visibleLines>
+  <description>Stack trace of the error for debugging purposes. e.g. ex.getStackTraceString() truncated by fit() helper.</description>
 </CustomField>

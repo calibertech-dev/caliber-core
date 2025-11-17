@@ -5,4 +5,5 @@
   <type>LongTextArea</type>
   <length>131072</length>
   <visibleLines>5</visibleLines>
+  <description>Payload of the error in JSON format for detailed context. e.g. {"key":"value"}</description>
 </CustomField>

@@ -5,4 +5,5 @@
   <type>LongTextArea</type>
   <length>32768</length>
   <visibleLines>3</visibleLines>
+  <description>Always prefix with package name.  e.g. [Caliber eSign] SignatureAPI ceremony for Envelope_Recipient__c 003... </description>
 </CustomField>

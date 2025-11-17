@@ -17,4 +17,5 @@
       <value><fullName>OTHER</fullName><default>true</default></value>
     </valueSetDefinition>
   </valueSet>
+  <description>Source of the error. e.g. APEX, FLOW, TRIGGER, etc.</description>
 </CustomField>

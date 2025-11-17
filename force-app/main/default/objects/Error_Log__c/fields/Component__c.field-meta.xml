@@ -4,4 +4,5 @@
   <label>Component</label>
   <type>Text</type>
   <length>255</length>
+  <description>Class Name or Flow API Name.  e.g. Apex: class name, Flow: flow API name</description>
 </CustomField>

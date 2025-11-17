@@ -5,4 +5,5 @@
   <type>LongTextArea</type>
   <length>32768</length>
   <visibleLines>3</visibleLines>
+  <description>Unique identifier to correlate related error logs across systems or processes. e.g. Envelope_Id__c or Flow.InterviewGuid</description>
 </CustomField>

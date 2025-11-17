@@ -5,4 +5,5 @@
   <type>LongTextArea</type>
   <length>32768</length>
   <visibleLines>3</visibleLines>
+  <description>Short human-friendly explanation.  e.g. Ceremony creation failed: 500 {raw body}</description>
 </CustomField>

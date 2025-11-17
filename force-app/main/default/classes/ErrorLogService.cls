@@ -1,7 +1,7 @@
 global with sharing class ErrorLogService {
     global enum Severity { DEBUG, INFO, WARN, ERROR, FATAL }
 
-    // Back-compat signature (still works)
+    // Minimal 6-arg overload – now delegates to the full method
     global static Id log(
         String context,
         String message,
@@ -25,7 +25,7 @@ global with sharing class ErrorLogService {
         );
     }
 
-    // Existing 9-arg overload (still valid) – now delegates to the full method
+    // 9-arg overload (still valid) – now delegates to the full method
     global static Id log(
         String context,
         String message,
