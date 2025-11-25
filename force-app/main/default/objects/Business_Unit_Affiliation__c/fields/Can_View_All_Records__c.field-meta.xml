@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_View_All_Records__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Grants the user elevated read rights for this BU.</description>
+    <label>Can View All Records</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -15,15 +15,16 @@ private class RelationshipContextServiceTest {
         );
         insert bu;
 
-        // Do NOT set Name; it's not writable on Invoice__c
-        Invoice__c inv = new Invoice__c();
-        inv.Account__c       = acc.Id;
-        inv.Business_Unit__c = bu.Id;
+        // Use a Core object that has Account__c + Business_Unit__c
+        Review_Request__c rr = new Review_Request__c(
+            Account__c       = acc.Id,
+            Business_Unit__c = bu.Id
+        );
         // No need to insert; we just care about field-reading logic.
 
         // Act
         RelationshipContextService.RelationshipContext ctx =
-            RelationshipContextService.resolve(inv);
+            RelationshipContextService.resolve(rr);
 
         // Assert
         System.assertNotEquals(null, ctx, 'Context should not be null');

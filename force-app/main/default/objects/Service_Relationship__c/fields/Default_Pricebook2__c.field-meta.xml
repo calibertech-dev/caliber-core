@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Pricebook2__c</fullName>
+    <label>Default Price Book</label>
+    <referenceTo>Pricebook2</referenceTo>
+    <relationshipLabel>Service Relationships</relationshipLabel>
+    <relationshipName>Default_Pricebook2_Service_Relationships</relationshipName>
+    <type>Lookup</type>
+    <trackHistory>true</trackHistory>
+</CustomField>

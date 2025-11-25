@@ -5,7 +5,7 @@
     <label>Contact</label>
     <referenceTo>Contact</referenceTo>
     <relationshipLabel>Related Contacts</relationshipLabel>
-    <relationshipName>Contact_RelatedContacts</relationshipName>
+    <relationshipName>Contact_Related_Contacts</relationshipName>
     <required>false</required>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
