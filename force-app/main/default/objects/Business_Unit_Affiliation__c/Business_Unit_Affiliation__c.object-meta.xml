@@ -140,10 +140,10 @@
         <formFactor>Small</formFactor>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
+    <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -155,10 +155,9 @@
     <externalSharingModel>Private</externalSharingModel>
     <label>Business Unit Affiliation</label>
     <nameField>
-        <displayFormat>BUA-{000000}</displayFormat>
-        <label>Business Unit Affiliation Name</label>
+        <label>BUID</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
     <pluralLabel>Business Unit Affiliations</pluralLabel>
     <searchLayouts></searchLayouts>
