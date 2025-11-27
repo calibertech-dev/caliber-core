@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
-  <customObject>true</customObject>
-  <motif>Custom24: Building</motif>
+    <customObject>true</customObject>
+    <icon>Core_Icons/Business_Unit_Icon.svg</icon>
+    <motif>Custom318: TV Widescreen</motif>
 </CustomTab>
