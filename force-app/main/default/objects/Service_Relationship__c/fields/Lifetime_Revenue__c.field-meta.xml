@@ -3,7 +3,9 @@
     <fullName>Lifetime_Revenue__c</fullName>
     <label>Lifetime Revenue</label>
     <precision>14</precision>
+    <required>false</required>
     <scale>2</scale>
-    <type>Currency</type>
     <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
 </CustomField>

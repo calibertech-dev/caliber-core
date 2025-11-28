@@ -14,12 +14,16 @@ private class BusinessUnitSharingServiceTest {
     static void recalc_sharesServiceRelationshipsByAffiliation() {
         User u = getCurrentUser();
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         // BU and SR
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'Test BU',
             Short_Code__c             = 'TBU',
             Customer_Service_Email__c = 'cs@test.com',
-            Customer_Service_Phone__c = '555-555-0000'
+            Customer_Service_Phone__c = '555-555-0000',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

@@ -3,7 +3,9 @@
     <fullName>Open_Balance__c</fullName>
     <label>Open Balance</label>
     <precision>14</precision>
+    <required>false</required>
     <scale>2</scale>
-    <type>Currency</type>
     <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
 </CustomField>

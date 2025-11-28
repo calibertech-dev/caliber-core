@@ -3,6 +3,10 @@ private class ServiceRelationshipBrandingServiceTest {
 
     @IsTest
     static void forBusinessUnit_populatesBrandingContext() {
+
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         // Arrange
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'Branding BU',
@@ -13,7 +17,8 @@ private class ServiceRelationshipBrandingServiceTest {
             Support_Phone__c          = '555-000-0001',
             Customer_Service_Email__c = 'cs@example.com',
             Customer_Service_Phone__c = '555-000-0002',
-            No_Reply_Email__c         = 'noreply@example.com'
+            No_Reply_Email__c         = 'noreply@example.com',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

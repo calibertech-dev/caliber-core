@@ -2,18 +2,48 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Default_Terms__c</fullName>
     <label>Default Terms</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>
             <sorted>true</sorted>
-            <value><fullName>Due on Receipt</fullName><default>true</default><label>Due on Receipt</label></value>
-            <value><fullName>Net 7</fullName><default>false</default><label>Net 7</label></value>
-            <value><fullName>Net 15</fullName><default>false</default><label>Net 15</label></value>
-            <value><fullName>Net 30</fullName><default>false</default><label>Net 30</label></value>
-            <value><fullName>Net 45</fullName><default>false</default><label>Net 45</label></value>
-            <value><fullName>Net 60</fullName><default>false</default><label>Net 60</label></value>
-            <value><fullName>Custom</fullName><default>false</default><label>Custom</label></value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>Due on Receipt</fullName>
+                <default>true</default>
+                <label>Due on Receipt</label>
+            </value>
+            <value>
+                <fullName>Net 15</fullName>
+                <default>false</default>
+                <label>Net 15</label>
+            </value>
+            <value>
+                <fullName>Net 30</fullName>
+                <default>false</default>
+                <label>Net 30</label>
+            </value>
+            <value>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+                <label>Net 45</label>
+            </value>
+            <value>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+                <label>Net 60</label>
+            </value>
+            <value>
+                <fullName>Net 7</fullName>
+                <default>false</default>
+                <label>Net 7</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
-    <trackHistory>true</trackHistory>
 </CustomField>

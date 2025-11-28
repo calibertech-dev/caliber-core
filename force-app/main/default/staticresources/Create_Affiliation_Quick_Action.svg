@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="core">
+        <g id="create_afilliation" transform="matrix(0.299501,0,0,0.299501,49.264525,49.914323)">
+            <g id="quick_action">
+                <g id="create_afilliation1" serif:id="create_afilliation" transform="matrix(1,0,0,1,-108.333333,-108.333333)">
+                    <g transform="matrix(0.416667,0,0,0.416667,0,0)">
+                        <path d="M219,370C219,343 228,312 242,288C259,258 278,246 293,224C318,187 323,134 307,94C291,53 253,29 209,30C165,31 129,58 115,99C99,144 106,198 142,232C157,246 171,268 163,289C156,309 132,318 115,326C76,343 29,367 21,413C13,451 39,490 80,490L250,490C258,490 263,480 258,474C233.005,445.11 219.164,408.202 219,370ZM379,250C313,250 259,304 259,370C259,436 313,490 379,490C445,490 499,436 499,370C499,304 445,250 379,250ZM440,380C440,386 435,390 429,390L400,390L400,420C400,426 395,430 389,430L369,430C363,430 360,426 360,420L360,390L329,390C323,390 320,386 320,380L320,360C320,354 323,350 329,350L360,350L360,320C360,314 363,310 369,310L389,310C395,310 400,314 400,320L400,350L429,350C435,350 440,354 440,360L440,380Z" style="fill:white;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+                <g id="create_afilliation2" serif:id="create_afilliation">
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

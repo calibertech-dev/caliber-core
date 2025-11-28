@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit</fullName>
+    <fields>Name</fields>
+    <fields>Legal_Entity__c</fields>
+    <fields>Parent_Business_Unit__c</fields>
+    <fields>Type__c</fields>
+    <fields>Ownership_Model__c</fields>
+    <fields>Customer_Service_Phone__c</fields>
+    <fields>Customer_Service_Email__c</fields>
+    <fields>No_Reply_Email__c</fields>
+    <fields>Website__c</fields>
+    <fields>Is_Active__c</fields>
+    <label>Business Unit</label>
+</CompactLayout>

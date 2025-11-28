@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Request_Event</fullName>
+    <fields>Name</fields>
+    <fields>Review_Request__c</fields>
+    <fields>Channel__c</fields>
+    <fields>Review_Request_Config__c</fields>
+    <fields>Event_Type__c</fields>
+    <fields>Event_Date__c</fields>
+    <label>Review Request Event</label>
+</CompactLayout>

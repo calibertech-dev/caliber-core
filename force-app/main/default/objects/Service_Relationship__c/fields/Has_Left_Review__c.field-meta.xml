@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-  <fullName>Has_Left_Review__c</fullName>
-  <label>Has Left Review</label>
-  <type>Checkbox</type>
-  <defaultValue>false</defaultValue>
-  <trackHistory>true</trackHistory>
+    <fullName>Has_Left_Review__c</fullName>
+    <defaultValue>false</defaultValue>
+    <label>Has Left Review</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
 </CustomField>

@@ -2,18 +2,21 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Event_Type__c</fullName>
     <label>Event Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
         <valueSetDefinition>
             <sorted>true</sorted>
             <value>
+                <fullName>Reminder</fullName>
+                <default>false</default>
+                <label>Reminder</label>
+            </value>
+            <value>
                 <fullName>Requested</fullName>
                 <default>true</default>
                 <label>Requested</label>
-            </value>
-            <value>
-                <fullName>Reminder</fullName>
-                <label>Reminder</label>
             </value>
         </valueSetDefinition>
     </valueSet>

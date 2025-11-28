@@ -14,11 +14,15 @@ private class BusinessUnitObjectSharingServiceTest {
     static void recalcForRecords_createsShareForActiveAffiliation() {
         User u = getCurrentUser();
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'BU Share Create',
             Short_Code__c             = 'BSC',
             Customer_Service_Email__c = 'cs-bu-share-create@test.com',
-            Customer_Service_Phone__c = '555-555-1000'
+            Customer_Service_Phone__c = '555-555-1000',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 
@@ -88,11 +92,15 @@ private class BusinessUnitObjectSharingServiceTest {
     static void recalcForRecords_removesSharesWhenAffiliationInactive() {
         User u = getCurrentUser();
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'BU Share Delete',
             Short_Code__c             = 'BSD',
             Customer_Service_Email__c = 'cs-bu-share-delete@test.com',
-            Customer_Service_Phone__c = '555-555-2000'
+            Customer_Service_Phone__c = '555-555-2000',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

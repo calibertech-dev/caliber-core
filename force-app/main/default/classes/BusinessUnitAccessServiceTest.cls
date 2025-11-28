@@ -36,11 +36,15 @@ private class BusinessUnitAccessServiceTest {
     static void getAffiliationsForUser_mapsFieldsCorrectly() {
         User u = getCurrentUser();
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'Access BU',
             Short_Code__c             = 'ACC',
             Customer_Service_Email__c = 'cs-access@test.com',
-            Customer_Service_Phone__c = '555-555-9999'
+            Customer_Service_Phone__c = '555-555-9999',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 
@@ -75,11 +79,15 @@ private class BusinessUnitAccessServiceTest {
     static void userHasAccessToBusinessUnit_respectsActiveFlag() {
         User u = getCurrentUser();
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'Access BU 2',
             Short_Code__c             = 'AC2',
             Customer_Service_Email__c = 'cs-access2@test.com',
-            Customer_Service_Phone__c = '555-555-8888'
+            Customer_Service_Phone__c = '555-555-8888',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

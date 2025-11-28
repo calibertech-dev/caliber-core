@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Request</fullName>
+    <fields>Name</fields>
+    <fields>Account__c</fields>
+    <fields>Business_Unit__c</fields>
+    <fields>Review_Platform__c</fields>
+    <fields>First_Request__c</fields>
+    <fields>Last_Request__c</fields>
+    <fields>Has_Left_Review__c</fields>
+    <label>Review Request</label>
+</CompactLayout>

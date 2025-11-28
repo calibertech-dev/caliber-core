@@ -7,11 +7,15 @@ private class RelationshipContextServiceTest {
         Account acc = new Account(Name = 'Context Test Account');
         insert acc;
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'Test BU',
             Short_Code__c             = 'TBU',
             Customer_Service_Email__c = 'support@example.com',
-            Customer_Service_Phone__c = '555-555-5555'
+            Customer_Service_Phone__c = '555-555-5555',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

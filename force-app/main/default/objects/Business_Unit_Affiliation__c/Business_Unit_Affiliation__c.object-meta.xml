@@ -141,7 +141,7 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Business_Unit_Affiliation</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
@@ -160,7 +160,15 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Business Unit Affiliations</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts>
+        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Work_Email__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Can_Manage_Billing__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Can_View_All_Records__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Is_Primary__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Is_Active__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

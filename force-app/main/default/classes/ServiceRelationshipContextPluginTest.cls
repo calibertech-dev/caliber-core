@@ -7,11 +7,15 @@ private class ServiceRelationshipContextPluginTest {
         Account acc = new Account(Name = 'SR Account');
         insert acc;
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'BU - Existing SR',
             Short_Code__c             = 'SR1',
             Customer_Service_Email__c = 'support@example.com',
-            Customer_Service_Phone__c = '555-555-5555'
+            Customer_Service_Phone__c = '555-555-5555',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 
@@ -62,11 +66,15 @@ private class ServiceRelationshipContextPluginTest {
         Account acc = new Account(Name = 'SR Create Account');
         insert acc;
 
+        Legal_Entity__c le = new Legal_Entity__c(Name = 'Test Legal Entity'); 
+        insert le;
+
         Business_Unit__c bu = new Business_Unit__c(
             Name                      = 'BU - Create SR',
             Short_Code__c             = 'SR2',
             Customer_Service_Email__c = 'support@example.com',
-            Customer_Service_Phone__c = '555-555-5555'
+            Customer_Service_Phone__c = '555-555-5555',
+            Legal_Entity__c           = le.Id
         );
         insert bu;
 

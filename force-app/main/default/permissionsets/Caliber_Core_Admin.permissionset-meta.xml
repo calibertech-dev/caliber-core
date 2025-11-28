@@ -22,6 +22,41 @@
     </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Can_Manage_Billing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>    
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Can_View_All_Records__c</field>
+        <readable>true</readable>
+    </fieldPermissions>  
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Is_Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions> 
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Is_Primary__c</field>
+        <readable>true</readable>
+    </fieldPermissions>   
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions> 
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.Work_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>    
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit_Affiliation__c.User__c</field>
+        <readable>true</readable>
+    </fieldPermissions>                                   
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Business_Unit_Branding__c.Accent_Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -39,7 +74,7 @@
         <editable>true</editable>
         <field>Business_Unit__c.Address__c</field>
         <readable>true</readable>
-    </fieldPermissions>
+    </fieldPermissions>  
     <fieldPermissions>
         <editable>true</editable>
         <field>Business_Unit__c.Is_Active__c</field>
@@ -52,6 +87,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Business_Unit__c.Ownership_Model__c</field>
+        <readable>true</readable>
+    </fieldPermissions>    
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit__c.Parent_Business_Unit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>    
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Business_Unit__c.Support_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -60,6 +105,11 @@
         <field>Business_Unit__c.Support_Phone__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Business_Unit__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>      
     <fieldPermissions>
         <editable>true</editable>
         <field>Business_Unit__c.Website__c</field>
@@ -115,6 +165,36 @@
         <field>Error_Log__c.Stacktrace__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.EIN__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.Entity_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.Incorporation_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.Incorporation_State__c</field>
+        <readable>true</readable>
+    </fieldPermissions> 
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.Parent_Legal_Entity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>     
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Legal_Entity__c.Trade_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>       
     <fieldPermissions>
         <editable>true</editable>
         <field>Review_Platform__c.Active__c</field>
@@ -322,6 +402,10 @@
     </tabSettings>
     <tabSettings>
         <tab>Error_Log__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Legal_Entity__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>

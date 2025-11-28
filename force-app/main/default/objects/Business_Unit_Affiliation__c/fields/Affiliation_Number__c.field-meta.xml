@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Affiliation_Number__c</fullName>
-    <label>Affiliation Number</label>
-    <type>Number</type>
-    <precision>6</precision>
-    <scale>0</scale>
-    <required>false</required>
     <description>Sequential number per Business Unit, used to form the Name (ShortCode + 3 digit number).</description>
+    <externalId>false</externalId>
+    <label>Affiliation Number</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
 </CustomField>
