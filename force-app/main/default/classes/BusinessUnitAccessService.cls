@@ -45,6 +45,28 @@ public with sharing class BusinessUnitAccessService {
         return countAffils > 0;
     }
 
+    /************************************************
+     * All *active* Business Units for a given user. *
+     *************************************************/  
+    public static Set<Id> getActiveBusinessUnitsForUser(Id userId) {
+        Set<Id> buIds = new Set<Id>();
+        if (userId == null) return buIds;
+
+        for (Affiliation a : getAffiliationsForUser(userId)) {
+            if (a.isActive && a.businessUnitId != null) {
+                buIds.add(a.businessUnitId);
+            }
+        }
+        return buIds;
+    }
+
+    /************************************************
+     * Convenience for the current user.            *
+     ************************************************/  
+    public static Set<Id> getActiveBusinessUnitsForCurrentUser() {
+        return getActiveBusinessUnitsForUser(UserInfo.getUserId());
+    }
+
     @TestVisible
     private static Affiliation fromSObject(Business_Unit_Affiliation__c bua) {
         Affiliation a = new Affiliation();

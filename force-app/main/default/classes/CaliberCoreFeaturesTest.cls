@@ -19,7 +19,10 @@ private class CaliberCoreFeaturesTest {
         System.assertEquals(false, CaliberCoreFeatures.isOn('AccountNumberGenerator'));
 
         CaliberCoreFeatures.clearForTest('AccountNumberGenerator');
-        // With no CMDT and no override, default is false
-        System.assertEquals(false, CaliberCoreFeatures.isOn('AccountNumberGenerator'));
+
+        // Now that the override is gone, we fall back to CMDT.
+        // AccountNumberGenerator__mdt.Enabled__c is true in metadata.
+        System.assertEquals(true, CaliberCoreFeatures.isOn('AccountNumberGenerator'));
     }
+
 }

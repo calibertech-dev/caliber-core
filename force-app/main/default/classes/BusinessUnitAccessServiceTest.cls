@@ -135,4 +135,61 @@ private class BusinessUnitAccessServiceTest {
             'Null businessUnitId should return false.'
         );
     }
+
+    @IsTest
+    static void getActiveBusinessUnitsForCurrentUser_respectsIsActive() {
+        User u = getCurrentUser();
+
+        Business_Unit__c bu1 = new Business_Unit__c(
+            Name                      = 'BU Active',
+            Short_Code__c             = 'ACT',
+            Customer_Service_Email__c = 'active@test.com',
+            Customer_Service_Phone__c = '555-111-1111',
+            Legal_Entity__c           = null  // or a valid LE if required in your org
+        );
+        insert bu1;
+
+        Business_Unit__c bu2 = new Business_Unit__c(
+            Name                      = 'BU Inactive',
+            Short_Code__c             = 'INA',
+            Customer_Service_Email__c = 'inactive@test.com',
+            Customer_Service_Phone__c = '555-222-2222',
+            Legal_Entity__c           = null
+        );
+        insert bu2;
+
+        // Active affiliation on BU1
+        Business_Unit_Affiliation__c affActive = new Business_Unit_Affiliation__c(
+            Business_Unit__c        = bu1.Id,
+            User__c                 = u.Id,
+            Is_Active__c            = true,
+            Can_View_All_Records__c = true
+        );
+        insert affActive;
+
+        // Inactive affiliation on BU2
+        Business_Unit_Affiliation__c affInactive = new Business_Unit_Affiliation__c(
+            Business_Unit__c        = bu2.Id,
+            User__c                 = u.Id,
+            Is_Active__c            = false,
+            Can_View_All_Records__c = true
+        );
+        insert affInactive;
+
+        Test.startTest();
+        Set<Id> allowed = BusinessUnitAccessService.getActiveBusinessUnitsForCurrentUser();
+        Test.stopTest();
+
+        System.assertEquals(
+            true,
+            allowed.contains(bu1.Id),
+            'Active BU should be included in allowed set.'
+        );
+        System.assertEquals(
+            false,
+            allowed.contains(bu2.Id),
+            'Inactive BU should not be included in allowed set.'
+        );
+    }
+
 }
