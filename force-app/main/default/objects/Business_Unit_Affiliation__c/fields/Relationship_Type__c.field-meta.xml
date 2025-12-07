@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Type__c</fullName>
+    <description>Contractor or Employee relationship type</description>
+    <externalId>false</externalId>
+    <label>Relationship Type</label>
+    <valueSet>
+        <valueSetDefinition>
+            <value>
+                <fullName>Contractor</fullName>
+                <label>Contractor</label>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>Employee</fullName>
+                <label>Employee</label>
+                <default>false</default>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+</CustomField>
