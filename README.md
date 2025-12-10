@@ -32,9 +32,13 @@ Caliber Core is the required base layer for all Caliber Platform modules, includ
 Caliber Core is the foundation layer and **must be installed first** before any other Caliber module.
 
 Dependent modules include:
-- **Caliber Commerce** – Financial lifecycle and billing engine.  
+- **Caliber Commerce & Procurement** – Financial lifecycle and billing engine.
+- **Caliber Compensation** – Employee and Contractor payroll, reimbursements and human resources.
+- **Caliber Customer Experience**  – Customer facing billing and self-service portal. 
+- **Caliber eSign** – Custom e-signature envnelope and template platform.
 - **Caliber Project Management** – Project, phase, and operational tracking.  
-- **Caliber Restoration** – Restoration industry specialization.  
+- **Caliber Restoration** – Restoration industry specialization.
+- **Caliber Partner Programs** – Service Provider Retailer/Dealer channel specialization. 
 - **Caliber MagicPlan Integration** – Field data synchronization and diagram integration.
 
 ---
@@ -69,7 +73,15 @@ Caliber Core introduces standardized, cross-package data relationships and confi
 | **Numbering_Rule__mdt** | Defines prefixes, sequence patterns, and reset logic for auto-numbered records. |
 | **Global_Configuration__mdt** | Centralized settings for cross-package toggles and feature flags. |
 | **Business_Unit__c** | Represents a brand, company, or division operating under the Caliber umbrella. |
-| **Brand_Theme__c** | Stores logo, color, and styling metadata for document generation and UI consistency. |
+| **Business_Unit_Affilation** | Represents a works association with various Business Units. |
+| **Legal_Entity__c** | The legal entity and structure behind a specific Business Unit. |
+| ** Service_Relationship__c** | The relationship an Account has with a Business Unit.  All custom objects point back to Service Relationship for Business Unit specific records. |
+| **Business_Unit_Branding__c** | Stores logo, color, and styling metadata for document generation and UI consistency. |
+| **Review_Platform__c** | Online review platforms. |
+| **Review_Request__c** | Represents the lifecycle of requests for a review from a specific Account. |
+| **Review_Request_Config__c** | The configuration engine behind the review request system.|
+| **Review_Request_Event__c** | Represents the individual review requests made per channel and per customer. |
+| **Link__c** | A configurable hyperlink object related to a Business Unit.  For storing various information such as logo URLs, terms of service links, etc. ||
 
 ---
 
